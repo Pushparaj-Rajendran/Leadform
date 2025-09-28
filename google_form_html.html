@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 FREE Business Growth Consultation - 3X Your Revenue!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, #2E86C1 0%, #28B463 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.1) 10px,
+                rgba(255,255,255,0.1) 20px
+            );
+            animation: shimmer 3s linear infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .form-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .value-proposition {
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .value-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        
+        .value-item .emoji {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        .total-value {
+            background: #F39C12;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .urgency {
+            background: #E74C3C;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+            position: relative;
+            z-index: 2;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .form-content {
+            padding: 40px 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-header {
+            background: linear-gradient(45deg, #3498DB, #2ECC71);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .question {
+            margin-bottom: 25px;
+        }
+        
+        .question-label {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2C3E50;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .question-description {
+            color: #7F8C8D;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #E8E8E8;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #3498DB;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .radio-group, .checkbox-group {
+            display: grid;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #F8F9FA;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .radio-option:hover, .checkbox-option:hover {
+            background: #E3F2FD;
+            border-color: #2196F3;
+            transform: translateX(5px);
+        }
+        
+        .radio-option input, .checkbox-option input {
+            margin-right: 12px;
+            transform: scale(1.2);
+        }
+        
+        .radio-option.selected, .checkbox-option.selected {
+            background: #E8F5E8;
+            border-color: #4CAF50;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .progress-bar {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        .progress-track {
+            height: 8px;
+            background: #E0E0E0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+        
+        .progress-text {
+            text-align: center;
+            margin-top: 8px;
+            font-weight: bold;
+            color: #2C3E50;
+        }
+        
+        .submit-section {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+        }
+        
+        .security-badges {
+            margin-top: 20px;
+            color: white;
+            opacity: 0.9;
+        }
+        
+        .mobile-optimized {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .form-header h1 {
+                font-size: 2rem;
+            }
+            
+            .form-content {
+                padding: 20px;
+            }
+            
+            .radio-group, .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+            
+            .mobile-optimized {
+                display: block;
+            }
+            
+            .desktop-only {
+                display: none;
+            }
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-icon:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .floating-icon:nth-child(2) { top: 20%; right: 10%; animation-delay: 1s; }
+        .floating-icon:nth-child(3) { bottom: 20%; left: 15%; animation-delay: 2s; }
+        .floating-icon:nth-child(4) { bottom: 10%; right: 20%; animation-delay: 3s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="progress-bar">
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">📝 Step 1 of 5 - Let's Begin!</div>
+        </div>
+        
+        <div class="form-header">
+            <div class="floating-elements">
+                <div class="floating-icon">📈</div>
+                <div class="floating-icon">💰</div>
+                <div class="floating-icon">🚀</div>
+                <div class="floating-icon">⭐</div>
+            </div>
+            
+            <h1>🚀 FREE Business Growth Consultation</h1>
+            <h2>3X Your Revenue in 90 Days!</h2>
+            
+            <div class="value-proposition">
+                <h3>💡 What You'll Get:</h3>
+                <div class="value-item">
+                    <span class="emoji">✅</span>
+                    <span>Personalized Growth Strategy (Worth ₹5,000)</span>
+                </div>
+                <div class="value-item">
+                    <span class="emoji">✅</span>
+                    <span>Market Analysis Report (Worth ₹3,000)</span>
+                </div>
+                <div class="value-item">
+                    <span class="emoji">✅</span>
+                    <span>30-Minute Expert Consultation (Worth ₹2,000)</span>
+                </div>
+                <div class="value-item">
+                    <span class="emoji">✅</span>
+                    <span>Industry Best Practices Guide (Worth ₹2,000)</span>
+                </div>
+                
+                <div class="total-value">
+                    🎁 Total Value: ₹12,000 - FREE for Limited Time!
+                </div>
+                
+                <div class="urgency">
+                    ⏰ Only 50 Spots Available This Month - 23 Left!
+                </div>
+            </div>
+        </div>
+        
+        <form class="form-content" id="leadForm">
+            <!-- Section 1: Personal Information -->
+            <div class="section">
+                <div class="section-header">
+                    👋 Section 1: Let's Get to Know You!
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">உங்க பேர் என்ன? (What's your name?) *</label>
+                    <p class="question-description">We want to personalize your consultation experience!</p>
+                    <input type="text" class="form-control" name="name" placeholder="e.g., Rajesh Kumar" required>
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">📧 Best Email to Reach You *</label>
+                    <p class="question-description">We'll send your FREE reports here (No spam, promise!)</p>
+                    <input type="email" class="form-control" name="email" placeholder="your.email@company.com" required>
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">📱 WhatsApp Number (Fastest Response) *</label>
+                    <p class="question-description">For instant consultation booking & quick updates</p>
+                    <input type="tel" class="form-control" name="phone" placeholder="+91 98765 43210" required>
+                </div>
+            </div>
+            
+            <!-- Section 2: Business Details -->
+            <div class="section">
+                <div class="section-header">
+                    🏢 Section 2: Tell Us About Your Business Empire!
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">Company/Business Name</label>
+                    <p class="question-description">Help us understand your business better</p>
+                    <input type="text" class="form-control" name="company" placeholder="e.g., Tech Solutions Pvt Ltd">
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">What's Your Role? *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="role" value="CEO/Founder" required>
+                            <span>👑 CEO/Founder (Decision Maker)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="role" value="Director/VP" required>
+                            <span>🎯 Director/VP (Strategy Leader)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="role" value="Manager" required>
+                            <span>📊 Manager (Operations Head)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="role" value="Business Owner" required>
+                            <span>💼 Business Owner (Entrepreneur)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="role" value="Marketing Head" required>
+                            <span>📈 Marketing Head (Growth Driver)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="role" value="Sales Head" required>
+                            <span>💰 Sales Head (Revenue Generator)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">What Industry Are You In? *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="industry" value="Technology/IT/Software" required>
+                            <span>💻 Technology/IT/Software</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="industry" value="Healthcare/Medical" required>
+                            <span>🏥 Healthcare/Medical</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="industry" value="Finance/Banking" required>
+                            <span>💰 Finance/Banking/Insurance</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="industry" value="E-commerce/Retail" required>
+                            <span>🛒 E-commerce/Retail</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="industry" value="Manufacturing" required>
+                            <span>🏭 Manufacturing/Industrial</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="industry" value="Education" required>
+                            <span>📚 Education/Training</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="industry" value="Restaurant/Food" required>
+                            <span>🍽️ Restaurant/Food Business</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="industry" value="Construction/Real Estate" required>
+                            <span>🏗️ Construction/Real Estate</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 3: Business Challenges -->
+            <div class="section">
+                <div class="section-header">
+                    😴 Section 3: What's Keeping You Up at Night?
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">Current Monthly Revenue Range</label>
+                    <p class="question-description">Helps us provide relevant growth strategies (Confidential)</p>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="revenue" value="0-1L">
+                            <span>💫 Starting Up (₹0 - ₹1 Lakh)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="revenue" value="1L-5L">
+                            <span>🌱 Growing (₹1L - ₹5L)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="revenue" value="5L-20L">
+                            <span>📈 Scaling (₹5L - ₹20L)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="revenue" value="20L-1Cr">
+                            <span>🚀 Established (₹20L - ₹1 Crore)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="revenue" value="1Cr+">
+                            <span>👑 Enterprise (₹1 Crore+)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">🎯 Biggest Business Challenge Right Now *</label>
+                    <p class="question-description">Select all that apply - we'll address each one!</p>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="Low Sales">
+                            <span>📉 Low Sales/Revenue</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="Finding Customers">
+                            <span>👥 Finding Quality Customers</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="Cash Flow">
+                            <span>💰 Cash Flow Issues</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="Marketing">
+                            <span>🎯 Marketing Not Working</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="Operations">
+                            <span>⚙️ Operations/Process Issues</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="Team Management">
+                            <span>👨‍💼 Team Management Problems</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 4: Goals & Requirements -->
+            <div class="section">
+                <div class="section-header">
+                    🎯 Section 4: Your Success Vision
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">Dream Business Goal (Next 12 Months) *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="goals" value="Double Revenue">
+                            <span>💸 Double Revenue</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="goals" value="10X Traffic">
+                            <span>🎯 10X Website Traffic</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="goals" value="Build Team">
+                            <span>👥 Build Strong Team</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="goals" value="Expand Markets">
+                            <span>🌍 Expand to New Markets</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="goals" value="Go Digital">
+                            <span>📱 Go Fully Digital</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">💬 Detailed Requirements/Questions</label>
+                    <p class="question-description">Share as much detail as you want - this helps us prepare a customized consultation!</p>
+                    <textarea class="form-control" name="requirements" placeholder="Tell us more about your specific situation, challenges, or questions...
+
+Examples:
+- 'My restaurant gets good footfall but low profits...'
+- 'E-commerce site has traffic but poor conversion...'
+- 'Team is growing but productivity is declining...'"></textarea>
+                </div>
+            </div>
+            
+            <!-- Section 5: Final Details -->
+            <div class="section">
+                <div class="section-header">
+                    📅 Section 5: Let's Schedule Your Success!
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">Preferred Consultation Time</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="time_preference" value="Early Morning">
+                            <span>🌅 Early Morning (8 AM - 10 AM)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="time_preference" value="Late Morning">
+                            <span>☀️ Late Morning (10 AM - 12 PM)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="time_preference" value="Afternoon">
+                            <span>🕐 Afternoon (12 PM - 3 PM)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="time_preference" value="Evening">
+                            <span>🌇 Evening (3 PM - 6 PM)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">How Soon Do You Need Results? *</label>
+                    <p class="question-description">This helps us prioritize and plan your consultation</p>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="urgency" value="This Week" required>
+                            <span>🚨 URGENT - This Week!</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="urgency" value="2 Weeks" required>
+                            <span>⚡ Fast - Within 2 Weeks</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="urgency" value="1 Month" required>
+                            <span>📅 Standard - Within 1 Month</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="urgency" value="2-3 Months" required>
+                            <span>🎯 Planned - 2-3 Months</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="submit-section">
+                <button type="submit" class="submit-btn">
+                    🚀 Get My FREE ₹12,000 Consultation Now!
+                </button>
+                
+                <div class="security-badges">
+                    <p>🔒 Your information is 100% secure & confidential</p>
+                    <p>✅ No spam, no sales pressure - Just pure value!</p>
+                    <p>⚡ Response within 24 hours guaranteed</p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Progress bar functionality
+        const sections = document.querySelectorAll('.section');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        
+        function updateProgress() {
+            let visibleSections = 0;
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    visibleSections = index + 1;
+                }
+            });
+            
+            const progress = (visibleSections / sections.length) * 100;
+            progressFill.style.width = progress + '%';
+            
+            const progressMessages = [
+                "📝 Step 1 of 5 - Getting Started!",
+                "🏢 Step 2 of 5 - Business Details",
+                "😴 Step 3 of 5 - Challenges & Goals",
+                "🎯 Step 4 of 5 - Your Vision",
+                "🎉 Final Step - Almost Done!"
+            ];
+            
+            progressText.textContent = progressMessages[visibleSections - 1] || progressMessages[0];
+        }
+        
+        // Update progress on scroll
+        window.addEventListener('scroll', updateProgress);
+        updateProgress();
+        
+        // Radio button interactions
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Remove selected class from all options in the same group
+                document.querySelectorAll(`input[name="${this.name}"]`).forEach(r => {
+                    r.closest('.radio-option').classList.remove('selected');
+                });
+                // Add selected class to chosen option
+                this.closest('.radio-option').classList.add('selected');
+            });
+        });
+        
+        // Checkbox interactions
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    this.closest('.checkbox-option').classList.add('selected');
+                } else {
+                    this.closest('.checkbox-option').classList.remove('selected');
+                }
+            });
+        });
+        
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = {};
+            
+            // Handle regular inputs
+            for (let [key, value] of formData.entries()) {
+                if (data[key]) {
+                    if (Array.isArray(data[key])) {
+                        data[key].push(value);
+                    } else {
+                        data[key] = [data[key], value];
+                    }
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            // Handle checkboxes specifically
+            const challenges = [];
+            const goals = [];
+            
+            document.querySelectorAll('input[name="challenges"]:checked').forEach(cb => {
+                challenges.push(cb.value);
+            });
+            
+            document.querySelectorAll('input[name="goals"]:checked').forEach(cb => {
+                goals.push(cb.value);
+            });
+            
+            data.challenges = challenges.join(', ');
+            data.goals = goals.join(', ');
+            data.source = 'Interactive HTML Form';
+            data.timestamp = new Date().toISOString();
+            
+            // Here you would normally send to your n8n webhook
+            console.log('Form Data:', data);
+            
+            // Show success message
+            alert(`🎉 Congratulations ${data.name}! 
+
+✅ Your FREE consultation is confirmed!
+✅ We've received your details
+✅ Expect our call within 24 hours
+✅ Check your email for confirmation
+
+🚀 GET READY FOR BUSINESS TRANSFORMATION!
+
+Your form data has been logged to the console for testing purposes.
+In production, this would be sent to your n8n webhook.`);
+            
+            // In production, replace the alert with:
+            /*
